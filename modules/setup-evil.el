@@ -51,6 +51,7 @@
   "l"     'paredit-forward-slurp-sexp
   "S"     'paredit-split-sexp
   "s"     'paredit-splice-sexp
+  "t"     'cider-toggle-trace-var
   "x"     'paredit-kill)
 
 ;; Doing this to override the stupid default command.
