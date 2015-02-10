@@ -4,9 +4,6 @@
 
 (setq cider-repl-tab-command 'indent-for-tab-command)
 
-;; Enable paredit for Clojure
-(add-hook 'clojure-mode-hook 'enable-paredit-mode)
-
 ;; A little more syntax highlighting
 (require 'clojure-mode-extra-font-locking)
 

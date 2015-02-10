@@ -55,3 +55,6 @@
         try-expand-dabbrev-from-kill
         try-complete-lisp-symbol-partially
         try-complete-lisp-symbol))
+
+;; paredit in programming mode
+(add-hook 'prog-mode-hook 'enable-paredit-mode)
