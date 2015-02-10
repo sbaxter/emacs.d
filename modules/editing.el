@@ -30,6 +30,7 @@
   (mark-whole-buffer)
   (untabify (region-beginning) (region-end))
   (keyboard-quit))
+(setq-default evil-shift-width 2)
 
 ;; add no new lines when "arrow-down key" at the end of a buffer
 (setq next-line-add-newlines nil)
@@ -54,4 +55,3 @@
         try-expand-dabbrev-from-kill
         try-complete-lisp-symbol-partially
         try-complete-lisp-symbol))
-

@@ -25,7 +25,8 @@
     rainbow-delimiters
     midje-mode
     evil
-    evil-leader))
+    evil-leader
+    key-chord))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
