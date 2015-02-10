@@ -23,7 +23,6 @@
     ido-ubiquitous
     smex
     rainbow-delimiters
-    midje-mode
     evil
     evil-leader
     key-chord))

@@ -13,7 +13,7 @@
  (add-hook 'post-command-hook
    (lambda ()
      (let ((color (cond ((minibufferp) default-color)
-                        ((evil-insert-state-p) '("#009900" . "#000000"))
+                        ((evil-insert-state-p) '("#005500" . "#000000"))
                         ((evil-emacs-state-p)  '("#990099" . "#ffffff"))
                         ((buffer-modified-p)   '("#000000" . "#00FF00"))
                         (t default-color))))

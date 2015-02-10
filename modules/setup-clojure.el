@@ -26,9 +26,6 @@
             (define-clojure-indent (fact 1))
             (define-clojure-indent (facts 1))))
 
-;; Midje mode
-(add-hook 'clojure-mode-hook 'midje-mode)
-
 ;;;;
 ;; Cider
 ;;;;
@@ -51,7 +48,7 @@
 (setq cider-repl-print-length 100)
 
 ;; Where to store the cider history.
-(setq cider-repl-history-file "~/.emacs.d/cider-history")
+(setq cider-repl-history-file "~/.emacs.d/.cider-history")
 
 ;; Wrap when navigating history.
 (setq cider-repl-wrap-history t)
@@ -65,7 +62,10 @@
 (setq cider-repl-result-prefix ";; => ")
 
 
+;;;;
 ;; rk-annotate
+;;;;
+
 (defvar clojure-keyword-vars
   '("defn$" "defn'" "fna" "fnv" "fn'" "fn$"))
 

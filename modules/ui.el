@@ -24,17 +24,9 @@
 (setq ring-bell-function 'ignore)
 
 
-;; Disable minor mode outline.
-(outline-minor-mode t)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ??? ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; don't pop up font menu
-(global-set-key (kbd "s-t") '(lambda () (interactive)))
-
-
-
-;; MODE LINE
+;;;;
+;; Mode Line
+;;;;
 
 ;; use setq-default to set it for /all/ modes
 (setq-default mode-line-format
@@ -44,14 +36,11 @@
 
     ;; the current major mode for the buffer.
     "["
-
     '(:eval (propertize "%m" 'help-echo buffer-file-coding-system))
     "] "
 
-    ;; column
-    ;; '%02' to set to 2 chars at least; prevents flickering
+    ;; column, '%02' to set to 2 chars at least; prevents flickering
     (propertize "%02c")
-
 
     ;; insert vs overwrite mode, input-method in a tooltip
     '(:eval (propertize (if overwrite-mode "Ovr" "")
@@ -61,13 +50,13 @@
 
     ;; was this buffer modified since the last save?
     '(:eval (when (buffer-modified-p)
-              (concat ","  (propertize "Mod"
+              (concat " "  (propertize "!"
                              'face 'font-lock-warning-face
                              'help-echo "Buffer has been modified"))))
 
     ;; is this buffer read-only?
     '(:eval (when buffer-read-only
-              (concat ","  (propertize "RO"
+              (concat " "  (propertize "RO"
                              'face 'font-lock-type-face
                              'help-echo "Buffer is read-only"))))
     " "
