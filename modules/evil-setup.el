@@ -58,6 +58,8 @@
 ;; cider leaders
 (evil-leader/set-key-for-mode 'clojure-mode
   "e"     'cider-eval-defun-at-point
+  "E"     'cider-load-buffer
+  "Q"     'cider-quit
   "i"     'cider-doc
   "t"     'cider-toggle-trace-var
   "C"     'cider-connect
