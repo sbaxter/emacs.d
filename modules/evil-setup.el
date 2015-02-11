@@ -43,6 +43,7 @@
 
 ;; leader commands
 (evil-leader/set-key
+  "b"     'switch-to-buffer
   "w"     'paredit-wrap-round
   "'"     'paredit-doublequote
   "["     'paredit-wrap-square
