@@ -2,10 +2,16 @@
 (global-linum-mode)
 
 ;; And disable line number mode when linum is active.
-(add-hook 'completion-list-mode-hook (lambda () (linum-mode -1)))
-(add-hook 'debugger-mode-hook (lambda () (linum-mode -1)))
-(add-hook 'cider-repl-mode-hook (lambda () (linum-mode -1)))
+(dolist
+    (mode-hook
+     '(completion-list-mode-hook
+       debugger-mode-hook
+       cider-repl-mode-hook
+       cider-stacktrace-mode-hook
+       cider-docview-mode-hook))
+  (add-hook mode-hook (lambda () (linum-mode -11))))
 
+;; Turn off hide-show?
 (hs-minor-mode -1)
 
 ;; disable menu, toolbar, and scrollbar

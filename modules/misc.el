@@ -18,7 +18,9 @@
 ;; Enter debug for startup errors.
 (setq debug-on-error t)
 
+;; Explicitly set coding priority
 (set-language-environment "UTF-8")
+(set-keyboard-coding-system nil)
 
 ;; Seed the random-number generator
 (random t)
@@ -28,10 +30,6 @@
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'control))
 
-;; Auto-fill
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
-(add-hook 'prog-mode-hook 'turn-on-auto-fill)
-
 ;; Edit compressed files.
 (auto-compression-mode t)
 
@@ -39,3 +37,9 @@
 (setq recentf-save-file "~/.emacs.d/.recentf")
 (setq recentf-max-saved-items 5)
 (recentf-mode -1)
+
+;; set text-mode as the default major mode, instead of fundamental-mode
+;; The first of the two lines in parentheses tells Emacs to turn on Text mode
+;; when you find a file, unless that file should go into some other mode, such
+;; as C mode.
+(setq-default major-mode 'text-mode)

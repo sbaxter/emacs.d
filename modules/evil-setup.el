@@ -44,15 +44,20 @@
 ;; leader commands
 (evil-leader/set-key
   "w"     'paredit-wrap-round
-  "<RET>" 'paredit-close-round-and-newline
+  "'"     'paredit-doublequote
+  "["     'paredit-wrap-square
+  "{"     'paredit-wrap-curly
   "h"     'paredit-backward-slurp-sexp
   "j"     'paredit-backward-barf-sexp
   "k"     'paredit-forward-barf-sexp
   "l"     'paredit-forward-slurp-sexp
   "S"     'paredit-split-sexp
   "s"     'paredit-splice-sexp
+  "x"     'paredit-kill
+  "e"     'cider-eval-defun-at-point
+  "i"     'cider-doc
   "t"     'cider-toggle-trace-var
-  "x"     'paredit-kill)
+  "q"     'cider-popup-buffer-quit-function)
 
 ;; Doing this to override the stupid default command.
 (evil-define-command evil-ex (&optional initial-input)
