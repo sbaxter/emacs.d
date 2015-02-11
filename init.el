@@ -19,6 +19,7 @@
   '(paredit
     clojure-mode
     clojure-mode-extra-font-locking
+    markdown-mode
     cider
     ido-ubiquitous
     smex
@@ -42,4 +43,5 @@
 (load "editing.el")
 (load "misc.el")
 (load "clojure-setup.el")
+(load "markdown-setup.el")
 (load "evil-setup.el")
