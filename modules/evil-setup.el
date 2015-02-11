@@ -45,7 +45,6 @@
 (evil-leader/set-key
   "b"     'switch-to-buffer
   "w"     'paredit-wrap-round
-  "'"     'paredit-doublequote
   "["     'paredit-wrap-square
   "{"     'paredit-wrap-curly
   "h"     'paredit-backward-slurp-sexp
@@ -54,11 +53,22 @@
   "l"     'paredit-forward-slurp-sexp
   "S"     'paredit-split-sexp
   "s"     'paredit-splice-sexp
-  "x"     'paredit-kill
+  "x"     'paredit-kill)
+
+;; cider leaders
+(evil-leader/set-key-for-mode 'clojure-mode
   "e"     'cider-eval-defun-at-point
   "i"     'cider-doc
   "t"     'cider-toggle-trace-var
-  "q"     'cider-popup-buffer-quit-function)
+  "C"     'cider-connect
+  "J"     'cider-jack-in)
+
+(evil-leader/set-key-for-mode 'cider-stacktrace-mode
+  "q"     'kill-buffer)
+
+(evil-leader/set-key-for-mode 'cider-docview-mode
+  "q"     '(lambda () (interactive) (cider-popup-buffer-quit-function 'kill-buffer)))
+
 
 ;; Doing this to override the stupid default command.
 (evil-define-command evil-ex (&optional initial-input)
