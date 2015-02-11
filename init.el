@@ -41,5 +41,5 @@
 (load "ui.el")
 (load "editing.el")
 (load "misc.el")
-(load "setup-clojure.el")
-(load "setup-evil.el")
+(load "clojure-setup.el")
+(load "evil-setup.el")
