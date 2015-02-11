@@ -46,10 +46,8 @@
   "b"     'switch-to-buffer
   "v"     'split-window-right
   "V"     'split-window-below
-  "o"     'other-window)
-
-;; paredit leaders
-(evil-leader/set-key-for-mode 'paredit-mode
+  "o"     'other-window
+  ;; paredit leaders
   "w"     'paredit-wrap-round
   "["     'paredit-wrap-square
   "{"     'paredit-wrap-curly
