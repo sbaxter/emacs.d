@@ -63,12 +63,9 @@
   "C"     'cider-connect
   "J"     'cider-jack-in)
 
-(evil-leader/set-key-for-mode 'cider-stacktrace-mode
-  "q"     'kill-buffer)
-
-(evil-leader/set-key-for-mode 'cider-docview-mode
-  "q"     '(lambda () (interactive) (cider-popup-buffer-quit-function 'kill-buffer)))
-
+(dolist (c-pop '(cider-stacktrace-mode cider-docview-mode))
+  (evil-leader/set-key-for-mode c-pop
+    "q" '(lambda () (interactive) (cider-popup-buffer-quit-function 'kill-buffer))))
 
 ;; Doing this to override the stupid default command.
 (evil-define-command evil-ex (&optional initial-input)
