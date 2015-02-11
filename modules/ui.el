@@ -1,7 +1,7 @@
 ;; Show line numbers
 (global-linum-mode)
 
-;; And disable line number mode when linum is active.
+;; And disable line numbers where I don't like them.
 (dolist
     (mode-hook
      '(completion-list-mode-hook
@@ -9,7 +9,7 @@
        cider-repl-mode-hook
        cider-stacktrace-mode-hook
        cider-docview-mode-hook))
-  (add-hook mode-hook (lambda () (linum-mode -11))))
+  (add-hook mode-hook (lambda () (linum-mode -1))))
 
 ;; Turn off hide-show?
 (hs-minor-mode -1)
