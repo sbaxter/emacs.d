@@ -65,6 +65,7 @@
   "E"     'cider-load-buffer
   "Q"     'cider-quit
   "i"     'cider-doc
+  "I"     'cider-jump-to-var
   "t"     'cider-toggle-trace-var
   "C"     'cider-connect
   "J"     'cider-jack-in)
