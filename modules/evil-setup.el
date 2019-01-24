@@ -8,17 +8,13 @@
 (setq-default evil-ex-previous-command nil)
 
 ;; change mode-line color by evil state
-(lexical-let ((default-color (cons (face-background 'mode-line)
-                                  (face-foreground 'mode-line))))
- (add-hook 'post-command-hook
-   (lambda ()
-     (let ((color (cond ((minibufferp) default-color)
-                        ((evil-insert-state-p) '("#005500" . "#000000"))
-                        ((evil-emacs-state-p)  '("#990099" . "#ffffff"))
-                        ((buffer-modified-p)   '("#000000" . "#00FF00"))
-                        (t default-color))))
-       (set-face-background 'mode-line (car color))
-       (set-face-foreground 'mode-line (cdr color))))))
+(setq evil-normal-state-tag   (propertize " <N> " 'face '((:background "#009900" :foreground "#000000")))
+      evil-emacs-state-tag    (propertize " <E> " 'face '((:background "#990099" :foreground "#000000")))
+      evil-insert-state-tag   (propertize " <I> " 'face '((:background "#005500" :foreground "#000000")))
+      evil-replace-state-tag  (propertize " <R> " 'face '((:background "#005500" :foreground "#000000")))
+      evil-motion-state-tag   (propertize " <M> " 'face '((:background "#005500" :foreground "#000000")))
+      evil-visual-state-tag   (propertize " <V> " 'face '((:background "#00ff00" :foreground "#000000")))
+      evil-operator-state-tag (propertize " <O> " 'face '((:background "#00ff00" :foreground "#000000"))))
 
 ;; Map jk -> ESC
 (require 'key-chord)

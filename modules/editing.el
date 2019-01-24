@@ -7,7 +7,7 @@
 (setq-default auto-save-default nil)
 
 ;; yay rainbows!
-(global-rainbow-delimiters-mode t)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 ;; Highlights matching parenthesis
 (show-paren-mode 1)
