@@ -55,8 +55,9 @@
   "s"     'paredit-splice-sexp
   "x"     'paredit-kill)
 
-;; cider leaders
+;; cider + clojure leaders
 (evil-leader/set-key-for-mode 'clojure-mode
+  "a"     'clojure-align
   "e"     'cider-eval-defun-at-point
   "E"     'cider-load-buffer
   "Q"     'cider-quit

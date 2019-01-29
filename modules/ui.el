@@ -1,6 +1,8 @@
 ;; Show line numbers
 (global-linum-mode)
 
+(setq inhibit-startup-screen t)
+
 ;; And disable line numbers where I don't like them.
 (dolist
     (mode-hook
