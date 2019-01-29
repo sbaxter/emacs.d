@@ -41,10 +41,10 @@
 (load "navigation.el")
 (load "ui.el")
 (load "editing.el")
-(load "misc.el")
 (load "clojure-setup.el")
 (load "markdown-setup.el")
 (load "evil-setup.el")
+(load "misc.el")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
