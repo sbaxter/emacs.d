@@ -64,7 +64,7 @@
 ;;;;
 
 (defvar clojure-keyword-vars
-  '("defn$" "defn'" "fna" "fnv" "fn'" "fn$"))
+  '("defn$" "defn'" "fna" "fnv" "fn'" "fn$" "deftest"))
 
 ;; Font lock rk-annotate keywords vars
 (font-lock-add-keywords 'clojure-mode
