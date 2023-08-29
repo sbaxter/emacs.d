@@ -8,7 +8,7 @@
 
 (custom-theme-set-variables
   'homebrew
-  '(linum-format "%4i "))
+  '(line-number-format "%4i "))
 
 (let (
       (*white*        "#FFFFFF")
@@ -96,7 +96,7 @@
 
       ;; GUI
       `(fringe ((t (:background, *background*))))
-      `(linum ((t (:background, *line-number* :foreground, *line-fg*))))
+      `(line-number ((t (:background, *line-number* :foreground, *line-fg*))))
       `(minibuffer-prompt ((t (:foreground, *variable*))))
       `(mode-line ((t (:background, *mode-line-bg* :foreground, *mode-line-fg*))))
       `(mode-line-inactive ((t (:background, *mode-inactive-bg* :foreground, *mode-inactive-fg*))))

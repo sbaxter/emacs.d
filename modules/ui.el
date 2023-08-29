@@ -1,5 +1,6 @@
 ;; Show line numbers
-(global-linum-mode)
+(line-number-mode)
+(global-display-line-numbers-mode)
 
 (setq inhibit-startup-screen t)
 
@@ -11,7 +12,7 @@
        cider-repl-mode-hook
        cider-stacktrace-mode-hook
        cider-docview-mode-hook))
-  (add-hook mode-hook (lambda () (linum-mode -1))))
+  (add-hook mode-hook (lambda () (line-number-mode -1))))
 
 ;; Turn off hide-show?
 (hs-minor-mode -1)
